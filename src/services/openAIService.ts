@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { getTestCasesPrompt } from '../utils/prompts';
+import 'dotenv/config';
 
 export async function generateTestCasesWithAI(workItemDetailsInJSON: object) {
     const url = `https://${process.env.AZURE_OPENAI_ENDPOINT}/openai/deployments/${process.env.AZURE_OPENAI_DEPLOYMENT}/chat/completions?api-version=${process.env.API_VERSION}`;
