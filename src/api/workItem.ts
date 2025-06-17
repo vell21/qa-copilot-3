@@ -4,7 +4,7 @@ import { getWorkItemAndPR, generateTestCases } from '../services/qaService';
 export const workItemRouter = Router();
 
 /**
- * POST /api/work-item/generate/:workItemId
+ * POST /api/workitem/generate/:workItemId
  */
 workItemRouter.post('/generate/:workItemId', async (req, res) => {
   const workItemId = Number(req.params.workItemId);
